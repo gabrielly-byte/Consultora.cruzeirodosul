@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gabrielly - Consultora de Bolsas | Cruzeiro do Sul Araxá</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fa;
+    margin: 0; padding: 0;
+    color: #333;
+  }
+  header {
+    background: #004080;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.5em;
+  }
+  header p {
+    font-size: 1.2em;
+    margin: 8px 0 0;
+  }
+  main {
+    max-width: 900px;
+    background: white;
+    margin: 30px auto;
+    border-radius: 10px;
+    padding: 30px 40px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+  }
+  main p.apresentacao {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    margin-top: 15px;
+    font-weight: 600;
+  }
+  input, select, textarea {
+    margin-top: 6px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s;
+  }
+  input:focus, select:focus, textarea:focus {
+    border-color: #004080;
+    outline: none;
+  }
+  button {
+    margin-top: 30px;
+    padding: 15px;
+    background: #004080;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  button:hover {
+    background: #003060;
+  }
+  .whatsapp {
+    display: block;
+    margin: 40px auto 10px;
+    background: #25d366;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    width: fit-content;
+    padding: 15px 30px;
+    border-radius: 40px;
+    font-size: 1.2em;
+    transition: background 0.3s;
+  }
+  .whatsapp:hover {
+    background: #1ebe57;
+  }
+  footer {
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.9em;
+    color: #666;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Gabrielly - Consultora de Bolsas</h1>
+  <p>Cruzeiro do Sul - Araxá, MG</p>
+  <p>Graduações 100% EAD</p>
+</header>
+
+<main>
+  <p class="apresentacao">
+    Olá, sou a Gabrielly, consultora da Cruzeiro do Sul em Araxá MG.<br />
+    Este site foi criado para facilitar nossa conexão e ajudar você a escolher o curso ideal.<br />
+    Fique à vontade para explorar as opções abaixo e, caso não encontre o curso que deseja, me chame no WhatsApp: <strong>(34) 99284-2752</strong>.<br />
+    Seja bem-vindo(a)! Qualquer dúvida, estou à disposição.
+  </p>
+
+  <form id="contactForm" action="https://formspree.io/f/mgebjlyk" method="POST">
+    <label for="nome">Nome completo *</label>
+    <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+
+    <label for="telefone">Telefone *</label>
+    <input type="tel" id="telefone" name="telefone" placeholder="(34) 9xxxx-xxxx" required pattern="[\d\s\-\(\)]+"/>
+
+    <label for="curso">Curso Pretendido *</label>
+    <select id="curso" name="curso" required>
+      <option value="">-- Selecione o curso --</option>
+      <optgroup label="Licenciaturas">
+        <option>Licenciatura em Artes Visuais</option>
+        <option>Licenciatura em Ciências Biológicas</option>
+        <option>Licenciatura em Ciências Sociais</option>
+        <option>Licenciatura em Educação Especial</option>
+        <option>Licenciatura em Educação Física</option>
+        <option>Licenciatura em Fisiografia</option>
+        <option>Licenciatura em Física</option>
+        <option>Licenciatura em Geografia</option>
+        <option>Licenciatura Interdisciplinar em Humanas</option>
+        <option>Licenciatura em História</option>
+        <option>Licenciatura em Letras - Libras</option>
+        <option>Licenciatura em Letras - Português e Espanhol</option>
+        <option>Licenciatura em Letras - Português e Inglês</option>
+        <option>Licenciatura em Letras - Português e Japonês</option>
+        <option>Licenciatura em Matemática</option>
+        <option>Licenciatura em Pedagogia</option>
+        <option>Licenciatura em Química</option>
+      </optgroup>
+      <optgroup label="Bacharelados (4 anos)">
+        <option>Administração</option>
+        <option>Administração Pública</option>
+        <option>Biomedicina</option>
+        <option>Ciências Biológicas (Bacharelado)</option>
+        <option>Ciências Contábeis</option>
+        <option>Ciências da Computação</option>
+        <option>Ciências Econômicas</option>
+        <option>Ciência Política</option>
+        <option>Educação Física (Bacharelado)</option>
+        <option>Farmácia</option>
+        <option>Filosofia (Bacharelado)</option>
+        <option>Física (Bacharelado)</option>
+        <option>Geografia (Bacharelado)</option>
+        <option>História (Bacharelado)</option>
+        <option>Jornalismo</option>
+        <option>Matemática (Bacharelado)</option>
+        <option>Nutrição</option>
+        <option>Publicidade e Propaganda</option>
+        <option>Química (Bacharelado)</option>
+        <option>Relações Internacionais</option>
+        <option>Relações Públicas</option>
+        <option>Serviço Social</option>
+        <option>Sistemas de Informação</option>
+        <option>Teologia</option>
+        <option>Terapia Ocupacional</option>
+        <option>Psicopedagogia</option>
+      </optgroup>
+      <optgroup label="Bacharelados (5 anos)">
+        <option>Arquitetura e Urbanismo</option>
+        <option>Engenharia Ambiental</option>
+        <option>Engenharia Civil</option>
+        <option>Engenharia da Computação</option>
+        <option>Engenharia de Produção</option>
+        <option>Engenharia de Software</option>
+        <option>Engenharia Elétrica</option>
+        <option>Engenharia Mecânica</option>
+        <option>Engenharia Mecatrônica</option>
+      </optgroup>
+      <optgroup label="Tecnólogos (2 anos)">
+        <option>Análise e Desenvolvimento de Sistemas</option>
+        <option>Bancos de Dados</option>
+        <option>Ciências de Dados</option>
+        <option>Coaching e Mentoria</option>
+        <option>Código</option>
+        <option>Conciliação, Mediação e Arbitragem</option>
+        <option>Comércio Exterior</option>
+        <option>Criminologia</option>
+        <option>Desenvolvimento de Back-end</option>
+        <option>Desenvolvimento Móvel</option>
+        <option>Empreendedorismo</option>
+        <option>Eventos</option>
+        <option>Fotografia</option>
+        <option>Gestão Comercial</option>
+        <option>Gestão da Produção Industrial</option>
+        <option>Gestão da Saúde Pública</option>
+        <option>Gestão de Cooperativas</option>
+        <option>Gestão de Qualidade</option>
+        <option>Gestão de Recursos Humanos</option>
+        <option>Gestão de Segurança Privada</option>
+        <option>Gestão de Tecnologia da Informação</option>
+        <option>Gestão de Turismo</option>
+        <option>Gestão do Agronegócio</option>
+        <option>Jogos Digitais</option>
+        <option>Logística</option>
+        <option>Marketing</option>
+        <option>Marketing Digital</option>
+        <option>Negócios Imobiliários</option>
+      </optgroup>
+      <optgroup label="Tecnólogos (3 anos)">
+        <option>Design de Interiores</option>
+        <option>Design de Moda</option>
+        <option>Design de Produto</option>
+        <option>Design Gráfico</option>
+        <option>Estética e Cosmética</option>
+        <option>Gastronomia</option>
+        <option>Gerontologia</option>
+        <option>Gestão Ambiental</option>
+        <option>Gestão Desportiva e do Lazer</option>
+        <option>Gestão do Terceiro Setor</option>
+        <option>Gestão Financeira</option>
+        <option>Gestão Hospitalar</option>
+        <option>Gestão Pública</option>
+        <option>Inteligência Artificial</option>
+        <option>Internet das Coisas</option>
+        <option>Podologia</option>
+        <option>Produção Cultural</option>
+        <option>Radiologia</option>
+        <option>Segurança Pública</option>
+        <option>Segurança do Trânsito</option>
+        <option>Serviços Jurídicos Notórias e Registrais</option>
+        <option>Serviços Penais</option>
+        <option>Processos Gerenciais</option>
+        <option>Redes de Computadores</option>
+        <option>Secretariado</option>
+        <option>Segurança da Informação</option>
+        <option>Segurança do Trabalho</option>
+        <option>Sistemas para Internet</option>
+        <option>Terapias Integrativas e Complementares</option>
+      </optgroup>
+    </select>
+
+    <label for="mensagem">Mensagem (opcional)</label>
+    <textarea id="mensagem" name="mensagem" placeholder="Se quiser, deixe uma mensagem para mim..." rows="4"></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <a href="https://wa.me/5534992842752?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20cursos%20da%20Cruzeiro%20do%20Sul." 
+     class="whatsapp" target="_blank" rel="noopener noreferrer">
+    Me chame no WhatsApp!
+  </a>
+</main>
+
+<footer>
+  <p>© 2025 Gabrielly - Consultora de Bolsas Cruzeiro do Sul Araxá - Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
+
