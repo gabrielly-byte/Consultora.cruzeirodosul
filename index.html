@@ -1,40 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Vestibular Cruzeiro do Sul</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Simulado - Cruzeiro do Sul</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Simulado de Vestibular - Cruzeiro do Sul Virtual</h1>
-  <form action="https://formsubmit.co/gabriellyvaz.cs@gmail.com" method="POST">
+  <h1>Simulado Vestibular - Cruzeiro do Sul</h1>
+  <form action="https://formsubmit.co/gabriele.vaz.cs@gmail.com" method="POST" id="quizForm">
     <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="Nova resposta do Simulado Vestibular">
+    <input type="hidden" name="_subject" value="Nova resposta do Simulado Cruzeiro do Sul">
     <input type="hidden" name="_template" value="table">
-
-    <label for="nome">Nome completo:</label><br>
+    <label for="nome">Nome:</label>
     <input type="text" name="nome" id="nome" required><br><br>
 
-    <div class="pergunta">
-      <p>1. Quem foi o autor de "Dom Casmurro"?</p>
-      <label><input type="radio" name="q1" value="José de Alencar" required> José de Alencar</label><br>
-      <label><input type="radio" name="q1" value="Carlos Drummond de Andrade"> Carlos Drummond de Andrade</label><br>
-      <label><input type="radio" name="q1" value="Machado de Assis"> Machado de Assis</label>
-    </div>
+    <div id="perguntas"></div>
 
-    <!-- repita o mesmo formato para as outras perguntas... -->
-    
-    <!-- (para economizar espaço aqui, mantenha as 15 perguntas como você já fez) -->
-
-    <br>
     <input type="submit" value="Enviar respostas">
   </form>
-
   <script src="script.js"></script>
 </body>
 </html>
 
-    <input type="submit" value="Enviar respostas">
-  </form>
-</body>
-</html>
