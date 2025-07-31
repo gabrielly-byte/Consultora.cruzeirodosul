@@ -2,37 +2,11 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Vestibular Cruzeiro do sul</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-      background-color: #f9f9f9;
-    }
-    h1 {
-      text-align: center;
-      color: #333;
-    }
-    .pergunta {
-      margin-bottom: 20px;
-    }
-    input[type="submit"] {
-      padding: 10px 20px;
-      background-color: #007BFF;
-      color: white;
-      border: none;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    input[type="submit"]:hover {
-      background-color: #0056b3;
-    }
-  </style>
+  <title>Vestibular Cruzeiro do Sul</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Simulado de Vestibular</h1>
+  <h1>Simulado de Vestibular - Cruzeiro do Sul Virtual</h1>
   <form action="https://formsubmit.co/gabriellyvaz.cs@gmail.com" method="POST">
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_subject" value="Nova resposta do Simulado Vestibular">
@@ -43,110 +17,23 @@
 
     <div class="pergunta">
       <p>1. Quem foi o autor de "Dom Casmurro"?</p>
-      <input type="radio" name="q1" value="José de Alencar"> José de Alencar<br>
-      <input type="radio" name="q1" value="Carlos Drummond de Andrade"> Carlos Drummond de Andrade<br>
-       <input type="radio" name="q1" value="Machado de Assis" required> Machado de Assis<br>
+      <label><input type="radio" name="q1" value="José de Alencar" required> José de Alencar</label><br>
+      <label><input type="radio" name="q1" value="Carlos Drummond de Andrade"> Carlos Drummond de Andrade</label><br>
+      <label><input type="radio" name="q1" value="Machado de Assis"> Machado de Assis</label>
     </div>
 
-    <div class="pergunta">
-      <p>2. Qual é o resultado de 8 × 7?</p>
-      <input type="radio" name="q2" value="56" required> 56<br>
-      <input type="radio" name="q2" value="54"> 54<br>
-      <input type="radio" name="q2" value="64"> 64<br>
-    </div>
-
-    <div class="pergunta">
-      <p>3. Em que continente fica o Brasil?</p>
-      <input type="radio" name="q3" value="América do Sul" required> América do Sul<br>
-      <input type="radio" name="q3" value="Europa"> Europa<br>
-      <input type="radio" name="q3" value="Ásia"> Ásia<br>
-    </div>
-
-    <div class="pergunta">
-      <p>4. Qual o símbolo químico da água?</p>
-      <input type="radio" name="q4" value="H2O" required> H₂O<br>
-      <input type="radio" name="q4" value="O2"> O₂<br>
-      <input type="radio" name="q4" value="CO2"> CO₂<br>
-    </div>
-
-    <div class="pergunta">
-      <p>5. Quem descobriu o Brasil?</p>
-      <input type="radio" name="q5" value="Cristóvão Colombo"> Cristóvão Colombo<br>
-      <input type="radio" name="q5" value="Pedro Álvares Cabral" required> Pedro Álvares Cabral<br>
-      <input type="radio" name="q5" value="Dom Pedro I"> Dom Pedro I<br>
-    </div>
-
-    <div class="pergunta">
-      <p>6. Quanto é a raiz quadrada de 49?</p>
-      <input type="radio" name="q6" value="7" required> 7<br>
-      <input type="radio" name="q6" value="6"> 6<br>
-      <input type="radio" name="q6" value="8"> 8<br>
-    </div>
-
-    <div class="pergunta">
-      <p>7. Qual é o planeta mais próximo do Sol?</p>
-      <input type="radio" name="q7" value="Mercúrio" required> Mercúrio<br>
-      <input type="radio" name="q7" value="Vênus"> Vênus<br>
-      <input type="radio" name="q7" value="Terra"> Terra<br>
-    </div>
-
-    <div class="pergunta">
-      <p>8. Qual é a capital da Argentina?</p>
-      <input type="radio" name="q8" value="Buenos Aires" required> Buenos Aires<br>
-      <input type="radio" name="q8" value="Lima"> Lima<br>
-      <input type="radio" name="q8" value="Santiago"> Santiago<br>
-    </div>
-
-    <div class="pergunta">
-      <p>9. O que é uma célula?</p>
-      <input type="radio" name="q9" value="Unidade básica da vida" required> Unidade básica da vida<br>
-      <input type="radio" name="q9" value="Tipo de átomo"> Tipo de átomo<br>
-      <input type="radio" name="q9" value="Forma geométrica"> Forma geométrica<br>
-    </div>
-
-    <div class="pergunta">
-      <p>10. Qual desses é um bioma brasileiro?</p>
-      <input type="radio" name="q10" value="Cerrado" required> Cerrado<br>
-      <input type="radio" name="q10" value="Savana africana"> Savana africana<br>
-      <input type="radio" name="q10" value="Deserto do Saara"> Deserto do Saara<br>
-    </div>
-
-    <div class="pergunta">
-      <p>11. Qual é o maior osso do corpo humano?</p>
-      <input type="radio" name="q11" value="Fêmur" required> Fêmur<br>
-      <input type="radio" name="q11" value="Úmero"> Úmero<br>
-      <input type="radio" name="q11" value="Tíbia"> Tíbia<br>
-    </div>
-
-    <div class="pergunta">
-      <p>12. Quem pintou a Mona Lisa?</p>
-      <input type="radio" name="q12" value="Leonardo da Vinci" required> Leonardo da Vinci<br>
-      <input type="radio" name="q12" value="Michelangelo"> Michelangelo<br>
-      <input type="radio" name="q12" value="Van Gogh"> Van Gogh<br>
-    </div>
-
-    <div class="pergunta">
-      <p>13. O que significa a sigla ONU?</p>
-      <input type="radio" name="q13" value="Organização das Nações Unidas" required> Organização das Nações Unidas<br>
-      <input type="radio" name="q13" value="Organização Nacional Unida"> Organização Nacional Unida<br>
-      <input type="radio" name="q13" value="Ordem das Nações Unidas"> Ordem das Nações Unidas<br>
-    </div>
-
-    <div class="pergunta">
-      <p>14. Em que ano o Brasil foi proclamado república?</p>
-      <input type="radio" name="q14" value="1889" required> 1889<br>
-      <input type="radio" name="q14" value="1822"> 1822<br>
-      <input type="radio" name="q14" value="1500"> 1500<br>
-    </div>
-
-    <div class="pergunta">
-      <p>15. Qual desses é um elemento químico?</p>
-      <input type="radio" name="q15" value="Ouro" required> Ouro<br>
-      <input type="radio" name="q15" value="Água"> Água<br>
-      <input type="radio" name="q15" value="Plástico"> Plástico<br>
-    </div>
+    <!-- repita o mesmo formato para as outras perguntas... -->
+    
+    <!-- (para economizar espaço aqui, mantenha as 15 perguntas como você já fez) -->
 
     <br>
+    <input type="submit" value="Enviar respostas">
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
     <input type="submit" value="Enviar respostas">
   </form>
 </body>
