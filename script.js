@@ -1,107 +1,98 @@
-const questions = [
+const perguntas = [
   {
-    question: "1. Qual é o maior planeta do Sistema Solar?",
-    options: ["Terra", "Marte", "Júpiter", "Saturno"],
-    correct: 2
+    texto: "1. Quem foi o autor de 'Dom Casmurro'?",
+    alternativas: ["José de Alencar", "Carlos Drummond de Andrade", "Machado de Assis"],
+    correta: "Machado de Assis"
   },
   {
-    question: "2. Em que ano o Brasil foi descoberto?",
-    options: ["1492", "1500", "1822", "1889"],
-    correct: 1
+    texto: "2. Qual é o resultado de 8 × 7?",
+    alternativas: ["56", "54", "64"],
+    correta: "56"
   },
   {
-    question: "3. Qual a fórmula da água?",
-    options: ["H2O", "CO2", "NaCl", "O2"],
-    correct: 0
+    texto: "3. Em que continente fica o Brasil?",
+    alternativas: ["Europa", "Ásia", "América do Sul"],
+    correta: "América do Sul"
   },
   {
-    question: "4. Quem escreveu 'Dom Casmurro'?",
-    options: ["Machado de Assis", "José de Alencar", "Clarice Lispector", "Graciliano Ramos"],
-    correct: 0
+    texto: "4. Qual o símbolo químico da água?",
+    alternativas: ["H2O", "CO2", "O2"],
+    correta: "H2O"
   },
   {
-    question: "5. Quantos continentes existem?",
-    options: ["4", "5", "6", "7"],
-    correct: 3
+    texto: "5. Quem descobriu o Brasil?",
+    alternativas: ["Cristóvão Colombo", "Dom Pedro I", "Pedro Álvares Cabral"],
+    correta: "Pedro Álvares Cabral"
   },
   {
-    question: "6. Qual é o símbolo químico do ouro?",
-    options: ["Go", "Ag", "Au", "Gd"],
-    correct: 2
+    texto: "6. Quanto é a raiz quadrada de 49?",
+    alternativas: ["6", "7", "8"],
+    correta: "7"
   },
   {
-    question: "7. Em que continente está o Egito?",
-    options: ["Europa", "África", "Ásia", "América"],
-    correct: 1
+    texto: "7. Qual é o planeta mais próximo do Sol?",
+    alternativas: ["Vênus", "Mercúrio", "Terra"],
+    correta: "Mercúrio"
   },
   {
-    question: "8. Qual foi o primeiro presidente do Brasil?",
-    options: ["Getúlio Vargas", "Deodoro da Fonseca", "Dom Pedro II", "Lula"],
-    correct: 1
+    texto: "8. Qual é a capital da Argentina?",
+    alternativas: ["Buenos Aires", "Santiago", "Lima"],
+    correta: "Buenos Aires"
   },
   {
-    question: "9. Qual é o plural de 'cidadão'?",
-    options: ["Cidadões", "Cidadãos", "Cidadãs", "Cidadãsos"],
-    correct: 1
+    texto: "9. O que é uma célula?",
+    alternativas: ["Tipo de átomo", "Unidade básica da vida", "Forma geométrica"],
+    correta: "Unidade básica da vida"
   },
   {
-    question: "10. Que número é representado pelos algarismos romanos 'XIV'?",
-    options: ["12", "13", "14", "15"],
-    correct: 2
+    texto: "10. Qual desses é um bioma brasileiro?",
+    alternativas: ["Deserto do Saara", "Cerrado", "Savana africana"],
+    correta: "Cerrado"
   },
   {
-    question: "11. Qual a capital do estado de Minas Gerais?",
-    options: ["São Paulo", "Belo Horizonte", "Brasília", "Vitória"],
-    correct: 1
+    texto: "11. Qual é o maior osso do corpo humano?",
+    alternativas: ["Fêmur", "Úmero", "Tíbia"],
+    correta: "Fêmur"
   },
   {
-    question: "12. A energia elétrica é medida em que unidade?",
-    options: ["Ohm", "Ampère", "Volts", "Kilowatt-hora"],
-    correct: 3
+    texto: "12. Quem pintou a Mona Lisa?",
+    alternativas: ["Van Gogh", "Leonardo da Vinci", "Michelangelo"],
+    correta: "Leonardo da Vinci"
   },
   {
-    question: "13. Quem pintou a Mona Lisa?",
-    options: ["Leonardo da Vinci", "Pablo Picasso", "Michelangelo", "Salvador Dalí"],
-    correct: 0
+    texto: "13. O que significa a sigla ONU?",
+    alternativas: ["Organização Nacional Unida", "Ordem das Nações Unidas", "Organização das Nações Unidas"],
+    correta: "Organização das Nações Unidas"
   },
   {
-    question: "14. Qual é a moeda oficial do Japão?",
-    options: ["Yuan", "Iene", "Won", "Dólar"],
-    correct: 1
+    texto: "14. Em que ano o Brasil foi proclamado república?",
+    alternativas: ["1822", "1500", "1889"],
+    correta: "1889"
   },
   {
-    question: "15. Qual é a principal função dos pulmões?",
-    options: ["Bombear sangue", "Filtrar toxinas", "Respiração", "Digestão"],
-    correct: 2
+    texto: "15. Qual desses é um elemento químico?",
+    alternativas: ["Ouro", "Plástico", "Água"],
+    correta: "Ouro"
   }
 ];
 
-window.onload = function () {
-  const quizForm = document.getElementById("quizForm");
+const container = document.getElementById("perguntas");
 
-  questions.forEach((q, index) => {
-    const div = document.createElement("div");
-    div.classList.add("question");
+perguntas.forEach((pergunta, i) => {
+  const div = document.createElement("div");
+  div.className = "pergunta";
+  div.innerHTML = `<p>${pergunta.texto}</p>`;
 
-    const title = document.createElement("p");
-    title.textContent = q.question;
-    div.appendChild(title);
+  // Embaralhar as alternativas
+  const alternativas = [...pergunta.alternativas].sort(() => Math.random() - 0.5);
 
-    q.options.forEach((option, i) => {
-      const label = document.createElement("label");
-      const input = document.createElement("input");
-      input.type = "radio";
-      input.name = `q${index}`;
-      input.value = i;
-      label.appendChild(input);
-      label.appendChild(document.createTextNode(" " + option));
-      div.appendChild(label);
-    });
-
-    quizForm.appendChild(div);
+  alternativas.forEach((alt) => {
+    const id = `q${i}_${alt}`;
+    div.innerHTML += `
+      <input type="radio" name="q${i}" value="${alt}" id="${id}" required>
+      <label for="${id}">${alt}</label><br>
+    `;
   });
-};
 
-function submitQuiz() {
-  alert("Respostas enviadas com sucesso! Aguarde o contato da instituição.");
-}
+  container.appendChild(div);
+});
